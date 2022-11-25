@@ -1,6 +1,17 @@
 resilience4j:
   retry:
     instances:
-      productServer:
-        maxRetryAttempts: 2
+      producerServer:
+        maxRetryAttempts: 10
         waitDuration: 5s
+#eureka:     #tells about the Eureka server details and its refresh time
+#  instance:
+#    leaseRenewalIntervalInSeconds: 1
+#    leaseExpirationDurationInSeconds: 2
+#  client:
+#    serviceUrl:
+#      defaultZone: http://127.0.0.1:8761/eureka/
+#    healthcheck:
+#      enabled: true
+#    lease:
+#      duration: 5
